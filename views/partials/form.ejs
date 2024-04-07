@@ -1,0 +1,37 @@
+<form action ="/api/Suggestions" method="POST" id="write-suggestion">
+    <div class="new_suggestion">
+        <div class="form-group">
+
+            <label for="name" class="text-light">Name</label>
+            <input type="hidden" name="id" value="">
+            <input type="text" name="name" value="" placeholder="Suggestor name">
+        </div>
+        <div class="form-group">
+            <label for="email" class="text-light">Email-ID</label>
+            <input type="text" name="email" value="" placeholder="suggestor@gmail.com">
+        </div>
+        <div class="form-group">
+            <label for="suggestion" class="text-light">Suggestion</label>
+            <input type="text" name="suggestion" value="" placeholder="Give your suggestion here....">
+        </div>
+        <div class="form-group">
+            <label for="status" class="text-light">Status</label>
+            <div class="radio inline">
+                <input type="radio" id="radio-active"name="status" value="Active">
+                <label for="radio-active" class="radio-label">Active</label>
+            </div> 
+            <div class="radio inline">
+                <input type="radio" id="radio-inactive"name="status" value="Inactive">
+                <label for="radio-inactive" class="radio-label">Inactive</label>
+            </div> 
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn text-dark update">Submit</button>
+
+        </div>
+        
+    </div>
+    
+    
+    
+</form>

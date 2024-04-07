@@ -1,0 +1,14 @@
+<% for(var i=0; i<Suggestions.length;i++){ %>
+<tr>
+    <td><%= i+1 %></td>
+    <td><%= Suggestions[i].name %></td>
+    <td><%= Suggestions[i].email %></td>
+    <td><%= Suggestions[i].suggestion %></td>
+    <td><%= Suggestions[i].status %></td>
+    <td>
+        <a href="/edit?id=<%= Suggestions[i]._id %>" class="btn border-shadow update">
+            <span><i class="fa fa-pencil" aria-hidden="true"></i></span>
+        </a>
+    </td>
+</tr>
+<%  } %>

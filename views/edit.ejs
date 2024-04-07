@@ -1,0 +1,54 @@
+<%- include('partials/header') %>
+<main id="mainContent">
+    <div class="container">
+        <div class="box-nav d-flex-justify-between">
+            <div class="filter">
+                <a href="/">Suggestions: </a>
+            </div>
+        </div>
+        <div class="form-title text-center">
+            <h2 class="text-dark">Edit Form</h2>
+            <span class="text-light">If you want to make any changes in user information</span>
+        </div>
+        <!-- edit form here -->
+        <form method="POST" id="add_suggestion">
+            <div class="new_suggestion">
+                <div class="form-group">
+        
+                    <label for="name" class="text-light">Name</label>
+                    <input type="hidden" name="id" value="<%= Suggestions._id %>">
+                    <input type="text" name="name" value="<%= Suggestions.name %>" placeholder="Suggestor name">
+                </div>
+                <div class="form-group">
+                    <label for="mail" class="text-light">Email-ID</label>
+                    <input type="text" name="mail" value="<%= Suggestions.email %>" placeholder="suggestor@gmail.com">
+                </div>
+                <div class="form-group">
+                    <label for="suggestion" class="text-light">Suggestion</label>
+                    <input type="text" name="suggestion" value="<%= Suggestions.suggestion %>" placeholder="Give your suggestion here....">
+                </div>
+                <div class="form-group">
+                    <label for="status" class="text-light">Status</label>
+                    <div class="radio inline">
+                        <input type="radio" id="radio-active"name="status" value="Active" <%=Suggestions.status=='Active'? 'checked': ''%>>
+                        <label for="radio-active" class="radio-label">Active</label>
+                    </div> 
+                    <div class="radio inline">
+                        <input type="radio" id="radio-inactive"name="status" value="Inactive" <%=Suggestions.status=='Inactive'? 'checked': ''%>>
+                        <label for="radio-inactive" class="radio-label">Inactive</label>
+                    </div> 
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Submit</button>
+        
+                </div>
+                
+            </div>
+            
+            
+            
+        </form>
+        
+    </div>
+</main>
+<%- include('partials/footer') %>
